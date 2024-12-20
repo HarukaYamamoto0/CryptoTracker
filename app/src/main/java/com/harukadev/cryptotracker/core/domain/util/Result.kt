@@ -1,4 +1,4 @@
-package com.harukadev.cryptotracker.util
+package com.harukadev.cryptotracker.core.domain.util
 
 typealias DomainError = Error
 

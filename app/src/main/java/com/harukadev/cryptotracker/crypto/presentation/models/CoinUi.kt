@@ -3,7 +3,7 @@ package com.harukadev.cryptotracker.crypto.presentation.models
 import android.icu.number.NumberFormatter
 import androidx.annotation.DrawableRes
 import com.harukadev.cryptotracker.crypto.domain.Coin
-import com.harukadev.cryptotracker.util.getDrawableIdForCoin
+import com.harukadev.cryptotracker.core.presentation.util.getDrawableIdForCoin
 import java.text.NumberFormat
 import java.util.Locale
 
