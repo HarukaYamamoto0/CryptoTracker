@@ -2,7 +2,7 @@ package com.harukadev.cryptotracker.crypto.data.networking
 
 import com.harukadev.cryptotracker.core.data.networking.constructUrl
 import com.harukadev.cryptotracker.core.data.networking.safeCall
-import com.harukadev.cryptotracker.core.domain.util.CoinDataSource
+import com.harukadev.cryptotracker.crypto.domain.CoinDataSource
 import com.harukadev.cryptotracker.core.domain.util.Result
 import com.harukadev.cryptotracker.core.domain.util.map
 import com.harukadev.cryptotracker.core.presentation.util.NetworkError

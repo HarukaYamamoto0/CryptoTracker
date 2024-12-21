@@ -100,11 +100,11 @@ fun CoinListItemPreview(modifier: Modifier = Modifier) {
 }
 
 internal val previewCoinUi = Coin(
-    id = 1,
+    id = "bitcoin",
     rank = 1,
     name = "Bitcoin",
     symbol = "BTC",
-    marketCapBr = 6345392.73,
-    priceBr = 6362.73,
+    marketCapUsd = 6345392.73,
+    priceUsd = 6362.73,
     changePercent24Hr = 10.73
 ).toCoinUi()

@@ -8,7 +8,7 @@ import java.text.NumberFormat
 import java.util.Locale
 
 data class CoinUi(
-    val id: Int,
+    val id: String,
     val rank: Int,
     val name: String,
     val symbol: String,
@@ -29,8 +29,8 @@ fun Coin.toCoinUi(): CoinUi {
         rank = rank,
         name = name,
         symbol = symbol,
-        marketCapBr = marketCapBr.toDisplayableNumber(),
-        priceBr = priceBr.toDisplayableNumber(),
+        marketCapBr = marketCapUsd.toDisplayableNumber(),
+        priceBr = marketCapUsd.toDisplayableNumber(),
         changePercent24Hr = changePercent24Hr.toDisplayableNumber(),
         iconRes = getDrawableIdForCoin(symbol)
     )

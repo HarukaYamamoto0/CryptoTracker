@@ -2,6 +2,7 @@ package com.harukadev.cryptotracker.crypto.presentation.coin_list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -32,7 +33,6 @@ fun CoinListScreen(
     } else {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(state.coins) { coinUi ->
                 CoinListItem(
@@ -53,7 +53,7 @@ private fun CoinsListScreenPreview(modifier: Modifier = Modifier) {
         CoinListScreen(
             state = CoinsListState(
                 coins = (1..100).map {
-                    previewCoinUi.copy(id = it)
+                    previewCoinUi.copy(id = it.toString())
                 }
             )
         )

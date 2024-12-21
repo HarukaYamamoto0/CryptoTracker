@@ -5,7 +5,6 @@ import com.harukadev.cryptotracker.core.presentation.util.NetworkError
 import io.ktor.client.statement.HttpResponse
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.coroutines.ensureActive
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
 import kotlin.coroutines.coroutineContext
 
