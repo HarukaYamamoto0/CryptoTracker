@@ -1,5 +1,6 @@
 package com.harukadev.cryptotracker.crypto.presentation.coin_list
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.harukadev.cryptotracker.core.domain.util.onError
@@ -8,7 +9,6 @@ import com.harukadev.cryptotracker.crypto.domain.CoinDataSource
 import com.harukadev.cryptotracker.crypto.presentation.models.toCoinUi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
@@ -29,7 +29,7 @@ class CoinListViewModel(
     fun onAction(action: CoinListAction) {
         when (action) {
             is CoinListAction.OnCoinClick -> {
-
+                /* TODO */
             }
 
             CoinListAction.OnRefresh -> {
@@ -47,12 +47,13 @@ class CoinListViewModel(
                 .onSuccess { coins ->
                     _state.update {
                         it.copy(
-                            coins = coins.map { it.toCoinUi() }
+                            coins = coins.map { it.toCoinUi() },
+                            isLoading = false
                         )
                     }
                 }
-                .onError { error ->
-                    _state.update { it.copy(isLoading = false) }
+                .onError {
+                    /* TODO */
                 }
         }
     }

@@ -1,5 +1,5 @@
 [versions]
-agp = "8.7.1"
+agp = "8.7.3"
 kotlin = "2.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -7,15 +7,19 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.12.01"
 uiTextGoogleFonts = "1.7.6"
 ktorClientCore = "3.0.3"
 ktorClientCio = "3.0.3"
-logbackClassic = "1.5.14"
 slf4jAndroid = "1.7.36"
-ktorClientLogging = "3.0.3"
 ktorClientContentNegotiation = "3.0.3"
 ktorSerializationKotlinxJson = "3.0.3"
+koinAndroid = "4.1.0-Beta1"
+koinCore = "4.1.0-Beta1"
+koinCompose = "4.1.0-Beta1"
+koinAndroidxCompose = "4.1.0-Beta1"
+koinAndroidxComposeNavigation = "4.1.0-Beta1"
+ktorClientLogging = "3.0.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,11 +39,15 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktorClientCore" }
 ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktorClientCio" }
-logback-classic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logbackClassic" }
 slf4j-android = { group = "org.slf4j", name = "slf4j-android", version.ref = "slf4jAndroid" }
-ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktorClientLogging" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koinAndroid" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koinCore" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koinCompose" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koinAndroidxCompose" }
+koin-androidx-compose-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation", version.ref = "koinAndroidxComposeNavigation" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktorClientLogging" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
