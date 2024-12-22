@@ -1,6 +1,5 @@
 package com.harukadev.cryptotracker.crypto.presentation.coin_list
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.harukadev.cryptotracker.core.domain.util.onError
