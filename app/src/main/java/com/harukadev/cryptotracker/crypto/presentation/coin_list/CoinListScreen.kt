@@ -29,6 +29,7 @@ import kotlinx.coroutines.withContext
 @Composable
 fun CoinListScreen(
     state: CoinsListState,
+    onAction: (CoinListAction) -> Unit,
     modifier: Modifier = Modifier
 ) {
     if (state.isLoading) {
@@ -45,7 +46,7 @@ fun CoinListScreen(
             items(state.coins) { coinUi ->
                 CoinListItem(
                     coinUi = coinUi,
-                    onClick = {}
+                    onClick = { onAction(CoinListAction.OnCoinClick(coinUi)) }
                 )
             }
         }
@@ -62,7 +63,8 @@ private fun CoinsListScreenPreview(modifier: Modifier = Modifier) {
                     coins = (1..100).map {
                         previewCoinUi.copy(id = it.toString())
                     }
-                )
+                ),
+                onAction = {}
             )
         }
     }

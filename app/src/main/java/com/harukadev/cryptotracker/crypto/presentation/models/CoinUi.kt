@@ -1,6 +1,5 @@
 package com.harukadev.cryptotracker.crypto.presentation.models
 
-import android.icu.number.NumberFormatter
 import androidx.annotation.DrawableRes
 import com.harukadev.cryptotracker.crypto.domain.Coin
 import com.harukadev.cryptotracker.core.presentation.util.getDrawableIdForCoin
@@ -12,8 +11,8 @@ data class CoinUi(
     val rank: Int,
     val name: String,
     val symbol: String,
-    val marketCapBr: DisplayableNumber,
-    val priceBr: DisplayableNumber,
+    val marketCapUsd: DisplayableNumber,
+    val priceUsd: DisplayableNumber,
     val changePercent24Hr: DisplayableNumber,
     @DrawableRes val iconRes: Int
 )
@@ -29,8 +28,8 @@ fun Coin.toCoinUi(): CoinUi {
         rank = rank,
         name = name,
         symbol = symbol,
-        marketCapBr = marketCapUsd.toDisplayableNumber(),
-        priceBr = marketCapUsd.toDisplayableNumber(),
+        marketCapUsd = marketCapUsd.toDisplayableNumber(),
+        priceUsd = marketCapUsd.toDisplayableNumber(),
         changePercent24Hr = changePercent24Hr.toDisplayableNumber(),
         iconRes = getDrawableIdForCoin(symbol)
     )

@@ -75,7 +75,7 @@ fun CoinListItem(
             horizontalAlignment = Alignment.End
         ) {
             Text(
-                text = "$ ${coinUi.marketCapBr.formatted}",
+                text = "$ ${coinUi.marketCapUsd.formatted}",
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = contentColor
@@ -99,12 +99,13 @@ fun CoinListItemPreview(modifier: Modifier = Modifier) {
     }
 }
 
+
 internal val previewCoinUi = Coin(
     id = "bitcoin",
     rank = 1,
     name = "Bitcoin",
     symbol = "BTC",
-    marketCapUsd = 6345392.73,
-    priceUsd = 6362.73,
-    changePercent24Hr = 10.73
+    marketCapUsd = 1.9018460867853474E12,
+    priceUsd = 96052.8666240108,
+    changePercent24Hr = -1.0296288162086142
 ).toCoinUi()
