@@ -11,11 +11,6 @@
                 <DeviceId pluginId="LocalEmulator" identifier="path=/home/harukadev/.android/avd/Medium_Phone.avd" />
               </handle>
             </Target>
-            <Target type="DEFAULT_BOOT">
-              <handle>
-                <DeviceId pluginId="LocalEmulator" identifier="path=/home/harukadev/.android/avd/Medium_Tablet_API_35.avd" />
-              </handle>
-            </Target>
           </targets>
         </DialogSelection>
       </SelectionState>
