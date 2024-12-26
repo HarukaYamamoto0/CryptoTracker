@@ -52,12 +52,10 @@ Data flow:
 ## 🎨 **App Images**
 
 ### Mobile
-![mobile](./assets/mobile.png)
+<img src="./assets/mobile.png" width="350" height="800" alt="mobile CryptoTracker"/>
 
 ### Tablet
 ![tablet](./assets/tablet.png)
-
-**Note:** Images may be added in the future for greater clarity.
 
 ## 🖋️ **What Did I Learn?**
 
