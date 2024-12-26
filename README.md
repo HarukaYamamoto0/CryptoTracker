@@ -1,102 +1,79 @@
 # CryptoTracker
 
-**CryptoTracker** é um aplicativo Android para rastreamento de preços de criptomoedas em tempo real, desenvolvido com foco em boas práticas de arquitetura. Este projeto foi inspirado e construído como parte do curso **"The Best Practice Guide to Android Architecture"** de [Philipp Lackner](https://github.com/philipplackner).
+**CryptoTracker** is an Android application for tracking cryptocurrency prices in real time, developed with a focus on good architectural practices. This project was inspired and built as part of the course **"The Best Practice Guide to Android Architecture"** by [Philipp Lackner](https://www.youtube.com/@PhilippLackner).
 
----
+## 🌟 **Project Highlights**
 
-## 🌟 **Destaques do Projeto**
+- **Real-time tracking:** See changes in the cryptocurrency market with updated prices.
+- **Efficient Research:** Quickly find the desired cryptocurrency.
+- **Dark Mode:** Light and dark theme for a more personalized experience.
+- **Detailed Visualization**: Specific information about each cryptocurrency.
 
-- **Acompanhamento em tempo real:** Veja as alterações no mercado de criptomoedas com preços atualizados.
-- **Pesquisa eficiente:** Encontre rapidamente a criptomoeda desejada.
-- **Dark Mode:** Tema claro e escuro para uma experiência mais personalizada.
-- **Visualização detalhada:** Informações específicas sobre cada criptomoeda.
+## 🔧 **Technologies Used**
 
----
+This project uses modern tools and standards of the Android ecosystem:
 
-## 🔧 **Tecnologias Utilizadas**
+- **Jetpack Compose:** For a declarative and responsive UI.
+- **MVVM Architecture:** Separating responsibilities between layers.
+- **Kotlin Coroutines & Flow:** Asynchronous data and event management.
+- **Ktor:** Integration with REST APIs to fetch data in real-time.
+- **Koin:** Dependency injection.
+- **Jetpack Navigation:** Safe and efficient navigation.
+- **Material Design 3:** For a modern and accessible design.
 
-Este projeto utiliza ferramentas e padrões modernos do ecossistema Android:
+## 🔄 **Project Architecture**
 
-- **Jetpack Compose:** Para uma interface do usuário declarativa e responsiva.
-- **Arquitetura MVVM:** Separando responsabilidades entre camadas.
-- **Kotlin Coroutines & Flow:** Gerenciamento assíncrono de dados e eventos.
-- **Retrofit:** Integração com APIs REST para buscar dados em tempo real.
-- **Hilt (Dagger):** Para injeção de dependências.
-- **Room Database:** Persistência de dados local.
-- **Jetpack Navigation:** Navegação segura e eficiente.
-- **Material Design 3:** Para um design moderno e acessível.
+O CryptoTracker was developed following a clean architecture approach:
 
----
+- **Presentation Layer:** Managed by `ViewModels` and `State` with Compose.
+- **Domain Layer:** Contains business rules.
+- **Data Layer:** Manages data sources, such as APIs and local databases.
 
-## 🔄 **Arquitetura do Projeto**
+Data flow:
 
-O CryptoTracker foi desenvolvido seguindo uma abordagem de arquitetura limpa:
+1. **UI** -> Triggers user events.
+2. **ViewModel** -> Processes events and triggers use cases.
+3. **Repositories** -> Integrate data sources (API).
+4. **Response** -> Updates the user interface state.
 
-- **Camada de Apresentação:** Gerenciada por `ViewModels` e `State` com Compose.
-- **Camada de Domínio:** Contém as regras de negócio e casos de uso.
-- **Camada de Dados:** Gerencia fontes de dados, como APIs e banco de dados local.
+## 🌐 **How ​​to Set Up the Project**
 
-Fluxo de dados:
-
-1. **UI** -> Dispara eventos de usuário.
-2. **ViewModel** -> Processa eventos e aciona casos de uso.
-3. **Use Cases** -> Implementam a lógica de negócio e interagem com os repositórios.
-4. **Repositórios** -> Integram fontes de dados (API e Room).
-5. **Resposta** -> Atualiza o estado na interface do usuário.
-
----
-
-## 🌐 **Como Configurar o Projeto**
-
-1. **Clone o repositório:**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/seu-usuario/CryptoTracker.git
+   git clone https://github.com/HarukaYamamoto0/CryptoTracker.git
    ```
 
-2. **Abra o projeto no Android Studio:** Certifique-se de usar a versão mais recente.
+2. **Open the project in Android Studio:** Make sure to use the latest version.
 
-3. **Configure a API Key:** Se necessário, adicione sua chave de API no arquivo `Constants.kt`:
-   ```kotlin
-   const val API_KEY = "sua-api-key"
-   ```
+3. **Synchronize the project:** Wait for Gradle to download the dependencies.
 
-4. **Sincronize o projeto:** Aguarde o Gradle baixar as dependências.
+4. **Execute the app:** Run on an emulator or physical device.
 
-5. **Execute o aplicativo:** Rode em um emulador ou dispositivo físico.
+## 🎨 **App Images**
 
----
+### Home Screen
+*A list of the most popular cryptocurrencies and their main information.*
 
-## 🎨 **Imagens do App**
+### Detail Screen
+Detailed graphics and information about a selected cryptocurrency.*
 
-### Tela Inicial
-*Uma lista com as criptomoedas mais populares e suas informações principais.*
+**Note:** Images may be added in the future for greater clarity.
 
-### Tela de Detalhes
-*Gráficos e informações detalhadas sobre uma criptomoeda selecionada.*
+## 🖋️ **What Did I Learn?**
 
-> **Nota:** Imagens podem ser adicionadas futuramente para maior clareza.
+During the development of this project, important concepts were consolidated:
 
----
+- How to structure Android projects with **Clean Architecture**.
+- Using **Jetpack Compose** to build declarative UIs.
+- Integration of **Reactive Streams** with Kotlin **Flow** and ViewModel.
+- Implementation of **dependency injection** with Koin.
+- Improvements in handling states and side-effects in the interface.
 
-## 🖋️ **O que Aprendi?**
+## ✍️ **Contributions**
 
-Durante o desenvolvimento deste projeto, foram consolidados conceitos importantes:
+Contributions are welcome! If you have suggestions, ideas, or encounter problems, open an [issue](https://github.com/HarukaYamamoto0/CryptoTracker/issues) or send a [pull request](https://github.com/HarukaYamamoto0/CryptoTracker/pulls).
 
-- Como estruturar projetos Android com **Clean Architecture**.
-- Uso de **Jetpack Compose** para construir UIs declarativas.
-- Integração de **Fluxos Reativos** com Kotlin **Flow** e ViewModel.
-- Implementação de **injeção de dependência** com Hilt.
-- Melhorias no tratamento de estados e side-effects na interface.
+## 📚 **License**
 
----
-
-## ✍️ **Contribuições**
-
-Contribuições são bem-vindas! Caso tenha sugestões, ideias ou encontre problemas, abra uma [issue](https://github.com/seu-usuario/CryptoTracker/issues) ou envie um [pull request](https://github.com/seu-usuario/CryptoTracker/pulls).
-
----
-
-## 📚 **Licença**
-
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is distributed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
