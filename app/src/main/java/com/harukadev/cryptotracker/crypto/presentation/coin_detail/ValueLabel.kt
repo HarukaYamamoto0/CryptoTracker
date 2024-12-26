@@ -1,6 +1,5 @@
 package com.harukadev.cryptotracker.crypto.presentation.coin_detail
 
-import android.icu.number.NumberFormatter
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -16,7 +15,7 @@ data class ValueLabel(
                 else -> 3
             }
             maximumFractionDigits = fractionDigits
-            minimumIntegerDigits = 0
+            minimumIntegerDigits = 1
         }
 
         return "${formatter.format(value)}$unit"
