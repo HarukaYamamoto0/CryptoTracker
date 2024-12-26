@@ -51,11 +51,11 @@ Data flow:
 
 ## 🎨 **App Images**
 
-### Home Screen
-*A list of the most popular cryptocurrencies and their main information.*
+### Mobile
+![mobile](./assets/mobile.png)
 
-### Detail Screen
-Detailed graphics and information about a selected cryptocurrency.*
+### Tablet
+![tablet](./assets/tablet.png)
 
 **Note:** Images may be added in the future for greater clarity.
 
