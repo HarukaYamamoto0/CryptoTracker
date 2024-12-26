@@ -56,7 +56,7 @@ fun CoinListItem(
             tint = MaterialTheme.colorScheme.primary
         )
 
-        Column(modifier.weight(1f)) {
+        Column(Modifier.fillMaxWidth().weight(1f)) {
             Text(
                 text = coinUi.symbol,
                 fontSize = 20.sp,
@@ -76,7 +76,7 @@ fun CoinListItem(
         ) {
             Text(
                 text = "$ ${coinUi.marketCapUsd.formatted}",
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = contentColor
             )

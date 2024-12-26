@@ -41,7 +41,7 @@ fun CoinListScreen(
         }
     } else {
         LazyColumn(
-            modifier = Modifier.fillMaxSize()
+            modifier = modifier.fillMaxSize()
         ) {
             items(state.coins) { coinUi ->
                 CoinListItem(
